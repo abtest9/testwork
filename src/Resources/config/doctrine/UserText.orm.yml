@@ -7,9 +7,13 @@ App\Entity\UserText:
             type: integer
             generator: { strategy: AUTO }
     fields:
-        userId:
-            type: \App\Entity\User
-            nullable: false
         text:
             type: string
             nullable: false
+    manyToOne:
+        user:
+            targetEntity: App\Entity\User
+            joinColumn:
+                nullable: false
+                name: user_id
+                referencedColumnName: id
