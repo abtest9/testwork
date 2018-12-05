@@ -13,7 +13,7 @@ class UserText
     /**
      * @var User
      */
-    private $userId;
+    private $user;
 
     /**
      * @var string
@@ -31,19 +31,19 @@ class UserText
     /**
      * @return User
      */
-    public function getUserId(): User
+    public function getUser(): User
     {
-        return $this->userId;
+        return $this->user;
     }
 
     /**
-     * @param User $userId
+     * @param User $user
      *
      * @return UserText
      */
-    public function setUserId(User $userId): UserText
+    public function setUser(User $user): UserText
     {
-        $this->userId = $userId;
+        $this->user = $user;
 
         return $this;
     }
