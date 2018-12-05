@@ -1,6 +1,6 @@
 FROM php:7.2-fpm
 
-RUN docker-php-ext-install -j$(nproc) mysql pdo_mysql
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
