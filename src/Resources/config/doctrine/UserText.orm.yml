@@ -1,0 +1,15 @@
+App\Entity\UserText:
+    type: entity
+    table: user_text
+
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        userId:
+            type: \App\Entity\User
+            nullable: false
+        text:
+            type: string
+            nullable: false
